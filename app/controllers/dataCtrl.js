@@ -15,7 +15,7 @@ app.service("dataService", function ($http, $q){
 
 angular
 .module('nApp')
-.controller('dataCtrl', ['$scope', 'dataService', '$location', function($scope, dataService, $location) {
+.controller('dataCtrl', ['$scope', 'dataService', '$location', '$sce', function($scope, dataService, $location, $sce) {
 
   var promise = dataService.getcolors();
   promise.then(function (data){
@@ -26,7 +26,7 @@ angular
 
   $scope.popupBtn = function (message) {
 
-    $scope.currentMessage = message;
+    $scope.currentMessage = $sce.trustAsHtml(message);
 
     if (!($scope.popupBlock)) {
       $scope.popupBlock = true;

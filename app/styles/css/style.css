@@ -38,6 +38,14 @@
   cursor: pointer;
 }
 
+.alert-box {
+  position: relative;
+}
+
+.alert-box img {
+  width: 100%;
+}
+
 .popup-container {
   display: block;
 }
