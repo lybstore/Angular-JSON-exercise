@@ -33,4 +33,8 @@ angular
     }
   }
 
+  $scope.closeBtn = function () {
+    $scope.popupBlock = false;
+  }
+
 }])

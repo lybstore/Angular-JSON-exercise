@@ -6,8 +6,9 @@
     </ul>
 
     <div class="alert-block" ng-class="{'popup-container': popupBlock}">
-      <div>
-        <a>{{currentMessage}}</a>
+      <a ng-click="closeBtn()"><i class="fa fa-times" aria-hidden="true"></i></a>
+      <div ng-bind-html="currentMessage">
+        {{currentMessage}}
       </div>
     </div>
 </div>
