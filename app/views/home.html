@@ -1,0 +1,13 @@
+<div class="Main-Block">
+    <ul class="block-elements">
+      <li ng-repeat="details in colors">
+        <button ng-click="popupBtn(details.message)" ng-style="{ 'color': details.color, 'background-color': details.value }">Click Me</button>
+      </li>
+    </ul>
+
+    <div class="alert-block" ng-class="{'popup-container': popupBlock}">
+      <div>
+        <a>{{currentMessage}}</a>
+      </div>
+    </div>
+</div>
